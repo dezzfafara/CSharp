@@ -15,8 +15,11 @@ namespace Lesson2
             Array.ShowArrayB();
             Array.SetArrayA();
             Array.ShowArrayA();
+            Console.WriteLine();
             Console.WriteLine("Максимальный элемент равен: " + Array.GetMaxArrayB());
-            Console.WriteLine("Приозведение всех элементов равно: " + Array.Multiply());
+            Console.WriteLine("Минимальный элемент равен: " + Array.GetMinArrayB());
+            Console.WriteLine("Сумма всех элементов равна: " + Array.Summ());
+            Console.WriteLine("Произведение всех элементов равно: " + Array.Multiply());
         }
     }
 }

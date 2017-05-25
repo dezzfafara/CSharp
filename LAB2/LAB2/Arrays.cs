@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lesson2
 {
+
     public class Arrays
     {
-        private double[] A = new double[5];
-        private double[,] B = new double[3, 4];
-        private double _MaxElement;
+        const int sizeA = 5, sizeB1 = 3, sizeB2 = 4;
+        private double[] A = new double[sizeA];
+        private double[,] B = new double[sizeB1, sizeB2];
+        private double _MaxElement, _MinElement;
         public void SetArrayA()
         {
             string inputData;
@@ -84,12 +86,52 @@ namespace Lesson2
 
             return _MaxElement;
         }
+        public double GetMinArrayA()
+        {
+            _MinElement = A[0];
+            for (int i = 1; i < A.Length; i++)
+            {
+                if (A[i] < _MinElement)
+                    _MinElement = A[i];
+            }
+            return _MinElement;
+        }
+        public double GetMinArrayB()
+        {
+            _MinElement = GetMinArrayA();
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    if (B[i, j] < _MinElement)
+                        _MinElement = B[i, j];
+                }
+            }
+            return _MinElement;
+        }
         public decimal Multiply()
         {
             decimal multiple = 1;
             for (int i = 0; i < A.Length; i++)
                 multiple *= Convert.ToDecimal(A[i]);
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                    multiple *= Convert.ToDecimal(B[i, j]);
+            }
             return multiple;
+        }
+        public decimal Summ()
+        {
+            decimal summ = 0;
+            for (int i = 0; i < A.Length; i++)
+                summ += Convert.ToDecimal(A[i]);
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                    summ += Convert.ToDecimal(B[i, j]);
+            }
+            return summ;
         }
     }
 }
