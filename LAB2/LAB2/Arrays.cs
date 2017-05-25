@@ -133,5 +133,28 @@ namespace Lesson2
             }
             return summ;
         }
+        public double EvenSummA()
+        {
+            double evenSumm = 0.00;
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] % 2 == 0)
+                    evenSumm += A[i];
+            }
+            return evenSumm;
+        }
+        public double OddColumnSummB()
+        {
+            double oddColumnSummB = 0.00;
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    if (j % 2 == 0)
+                        oddColumnSummB += B[i, j];
+                }
+            }
+            return oddColumnSummB;
+        }
     }
 }

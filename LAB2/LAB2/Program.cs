@@ -20,6 +20,9 @@ namespace Lesson2
             Console.WriteLine("Минимальный элемент равен: " + Array.GetMinArrayB());
             Console.WriteLine("Сумма всех элементов равна: " + Array.Summ());
             Console.WriteLine("Произведение всех элементов равно: " + Array.Multiply());
+            Console.WriteLine("Сумма четных элеметов массива А: " + Array.EvenSummA());
+            Console.WriteLine("Сумма элементов нечетных столбцов массива В: " + Array.OddColumnSummB());
+
         }
     }
 }
