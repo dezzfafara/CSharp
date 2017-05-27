@@ -8,7 +8,7 @@ namespace LAB2
 {
     class ArraysMerging
     {
-        private const int sizeM = 10, sizeN = 5;
+        private const int sizeM = 20, sizeN = 10;
         int[] arrayA = new int[sizeM];
         int[] arrayB = new int[sizeN];
         int[] arrayC = new int[sizeM + sizeN];
@@ -17,9 +17,9 @@ namespace LAB2
         {
             Random random = new Random();
             for (int i = 0; i < arrayA.Length; i++)
-                arrayA[i] = random.Next(1, 10);
+                arrayA[i] = random.Next(1, 30);
             for (int i = 0; i < arrayB.Length; i++)
-                arrayB[i] = random.Next(1, 10);
+                arrayB[i] = random.Next(1, 30);
         }
         private void PushIntoArrayC()
         {
