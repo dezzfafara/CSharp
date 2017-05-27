@@ -14,9 +14,9 @@ namespace LAB2
             string inputData;
             do
             {
-                Console.WriteLine("Выберите дейтсвие:/n");
+                Console.WriteLine("Выберите дейтсвие:");
                 Console.WriteLine("1 - расчеты для массивов; 2 - объединение общих элементов массивов; " +
-                    "3 - проверка палиндрома; 4 - подсчет слов в предложении; 0 - выход");
+                    "\n3 - проверка палиндрома; 4 - подсчет слов в предложении; \n5 - сумма между минимальным и максимальным элементами массива; 0 - выход");
                 inputData = Console.ReadLine();
                 if (int.TryParse(inputData, out choise))
                     Console.WriteLine("Успешная конвертация");
@@ -52,6 +52,10 @@ namespace LAB2
                     case 4:
                         var sentence = new WordsCount();
                         Console.WriteLine("Количество слов в предложении:" + sentence.CountWords());
+                        break;
+                    case 5:
+                        var summMimMax = new DoubleDimensionArray();
+                        Console.WriteLine("Сумма между минимальным и максимальным элементами массива: " + summMimMax.SummBetweenMinMax());
                         break;
                     default:
                         choise = 0;

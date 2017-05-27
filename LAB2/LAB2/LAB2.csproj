@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Arrays.cs" />
     <Compile Include="ArraysMerging.cs" />
+    <Compile Include="DoubleDimensionArray.cs" />
     <Compile Include="Palindrome.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
