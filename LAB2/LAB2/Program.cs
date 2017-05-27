@@ -16,7 +16,7 @@ namespace LAB2
             {
                 Console.WriteLine("Выберите дейтсвие:/n");
                 Console.WriteLine("1 - расчеты для массивов; 2 - объединение общих элементов массивов; " +
-                    "3 - проверка палиндрома; 0 - выход");
+                    "3 - проверка палиндрома; 4 - подсчет слов в предложении; 0 - выход");
                 inputData = Console.ReadLine();
                 if (int.TryParse(inputData, out choise))
                     Console.WriteLine("Успешная конвертация");
@@ -48,6 +48,10 @@ namespace LAB2
                     case 3:
                         var palindrome = new Palindrome();
                         Console.WriteLine("ПАЛИНДРОМ ? :\n" + palindrome.PalindormeCheck());
+                        break;
+                    case 4:
+                        var sentence = new WordsCount();
+                        Console.WriteLine("Количество слов в предложении:" + sentence.CountWords());
                         break;
                     default:
                         choise = 0;

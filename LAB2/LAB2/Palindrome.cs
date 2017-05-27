@@ -11,7 +11,7 @@ namespace LAB2
         private string defaultString;
         private void SetString()
         {
-            Console.WriteLine("Введите строку для проверки:");
+            Console.WriteLine("Введите слово для проверки:");
             defaultString = Console.ReadLine().ToLower();
         }
         private string ReverseString(string str)
