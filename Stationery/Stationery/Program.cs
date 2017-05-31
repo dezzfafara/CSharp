@@ -10,7 +10,18 @@ namespace Stationery
     {
         static void Main(string[] args)
         {
-            Pencil[] pencil = new Pencil[5];
+            double totalprice = 0;
+            Pencil[] pencil = new Pencil[10];
+            pencil[0] = new Pencil();
+            pencil[0].ShowPencilInfo();
+            pencil[1] = new Pencil(1.33, "Erich Krause", true);
+            pencil[1].ShowPencilInfo();
+            pencil[2] = new Pencil(2.69, "Erich Krause", true);
+            pencil[2].ShowPencilInfo();
+            Console.WriteLine("Количество карандашей: " + Pencil.GetQuantity());
+            Pencil.CountTotalPrice(ref totalprice);
+            Console.WriteLine("Общая стоимость:" + totalprice);
+
 
         }
     }
