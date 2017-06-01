@@ -12,9 +12,9 @@ namespace Stationery
         {
             return _totalQuantity;
         }
-        public static void CountTotalPrice(ref double totalprice)
+        public static void CountTotalPrice(ref double totalPrice)
         {
-            totalprice = _totalPrice;
+            totalPrice = _totalPrice;
         }
     }
 }

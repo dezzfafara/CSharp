@@ -78,11 +78,34 @@ namespace Stationery
                 Console.WriteLine("Цена установлена");
             else
                 Console.WriteLine("Ошибка конвертации");
+            _totalPrice += this._price;
         }
         public void SetColor()
         {
             Console.WriteLine("Введите цвет:");
             _color = Console.ReadLine();
+        }
+        public void SetForm()
+        {
+            Console.WriteLine("Введите тип:");
+            _form = Console.ReadLine();
+        }
+        public void SetProducer()
+        {
+            Console.WriteLine("Введите производителя:");
+            _producer = Console.ReadLine();
+        }
+        public void SetHasEraser()
+        {
+            Console.WriteLine("Есть ли у данной модели ластик ?:");
+            inputData = Console.ReadLine();
+            if (bool.TryParse(inputData, out _hasEraser))
+                Console.WriteLine("Наличие ластика установлено");
+            else
+            {
+                Console.WriteLine("Ошибка конвертации!!");
+                _hasEraser = false;
+            }
         }
         public void ShowPencilInfo()
         {
