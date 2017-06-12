@@ -24,7 +24,6 @@ namespace LAB3
             {
                 Console.Write(arr[i] + " ");
             }
-
         }
     }
 }
