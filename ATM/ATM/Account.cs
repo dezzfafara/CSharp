@@ -10,6 +10,7 @@ namespace ATM
     {
         class Account
         {
+            private string _InputData;
             public double _Balance;
             private Guid _ID;
             private int _PIN;
@@ -23,6 +24,12 @@ namespace ATM
             public override string ToString()
             {
                 return "" + _ID + " :: " + _Balance + " :: " + _PIN;
+            }
+            public void SetBalance()
+            {
+                Console.WriteLine("Введите число:");
+                _InputData = Console.ReadLine();
+                _Balance = double.Parse(_InputData);
             }
         }
     }

@@ -13,10 +13,11 @@ namespace ATM
         {
             static void Main(string[] args)
             {
-                C::Client BankClients = new C::Client(3);
+                C::Client BankClients = new C::Client(1);
                 for (int i = 0; i < BankClients.Length; i++)
                     Console.WriteLine(BankClients[i]);
-
+                BankClients[0].SetBalance();
+                Console.WriteLine(BankClients[0]);
             }
         }
     }

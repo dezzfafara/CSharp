@@ -10,6 +10,7 @@ namespace ATM
     {
         class Client
         {
+            private string _InputData;
             Account.Account[] ClientsAccounts;
             public Client(int size)
             {
